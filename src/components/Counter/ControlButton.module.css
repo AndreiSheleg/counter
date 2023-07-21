@@ -1,0 +1,10 @@
+.button {
+    background: var(--primary-color);
+    font-size: 30px;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+}
+.disabled {
+    opacity: 0.5;
+}
