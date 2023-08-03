@@ -4,7 +4,17 @@
     border-radius: 10px;
     padding: 10px;
     border: none;
+    color: var(--bg-color);
+    cursor: pointer;
+    transition: .3s;
 }
+/*.button:hover{
+    opacity: 0.8;
+}
+.button:active {
+    transform: scale(110%)
+}*/
+
 .disabled {
     opacity: 0.5;
 }
