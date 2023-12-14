@@ -9,8 +9,10 @@ export type CounterSettings = {
     maxValue: number,
     startValue: number,
 }
+
 function App() {
 
+    const [areSettingsChanged, setAreSettingsChanged] = useState(false)
 
     const [settings, setSettings] = useState<CounterSettings>({
         maxValue: 5,
@@ -28,7 +30,6 @@ function App() {
         setSettings(settings)
     }
 
-
     const increaseCounter = () => {
         setCount(count + 1)
         if (count >= settings.maxValue) {
@@ -43,7 +44,7 @@ function App() {
 
     return (
         <div className="App">
-            <SettingsMenu settings={settings} setCurrentSettings={setCurrentSettings}/>
+            <SettingsMenu settings={settings} setCurrentSettings={setCurrentSettings} areSettingsChanged={areSettingsChanged} setAreSettingsChanged={setAreSettingsChanged}/>
             <Counter maxValue={settings.maxValue} startValue={settings.startValue} count={count} increaseCounter={increaseCounter} resetCount={resetCount}/>
 
         </div>

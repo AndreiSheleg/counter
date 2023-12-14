@@ -8,6 +8,7 @@ type ControlButtonPropsType = {
 }
 
 export const ControlButton = (props: ControlButtonPropsType) => {
+
     const buttonClass = `${styles.button} ${props.disabled ? styles.disabled : ''}`
     // styles.button styles.disabled два класса или сколько угодно, поэтому строка
     return (
